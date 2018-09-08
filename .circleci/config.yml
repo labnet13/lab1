@@ -6,7 +6,7 @@ jobs:
     steps:
         - checkout
         - run: apk update && apk add openssh-client bash sshpass
-        - run: sshpass -e scp -o stricthostkeychecking=no -r . csl@lab1.cybersecurity.li:/home/csl
+        - run: sshpass -e scp -o stricthostkeychecking=no -r . csl@lab1.cybersecurity.li:/var/www/lab1
 workflows:
   version: 1
   build:
